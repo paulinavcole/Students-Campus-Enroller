@@ -4,14 +4,13 @@ const app = express();
 const path = require('path');
 
 app.use(express.json());
-// static middleware
 app.use('/dist', express.static(path.join(__dirname, '../dist')))
+app.use('/api', require('./api/routes'));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'))
 }); 
 
-//page not found
 app.use((req, res, next) => {
     const error = Error('page not found');
     error.status = 404;
