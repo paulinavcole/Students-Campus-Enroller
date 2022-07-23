@@ -6,6 +6,8 @@ import Nav from './Nav';
 import Students from './Students';
 import Campuses from './Campuses';
 import SingleCampus from './SingleCampus';
+import SingleStudent from './SingleStudent';
+
 
 class App extends Component {
     componentDidMount() {
@@ -25,6 +27,7 @@ class App extends Component {
                 </Route>
                 <Route path="/students" exact component={Students} />
                 <Route path="/campuses" exact component={Campuses} />
+                <Route path="/students/:id" exact component={SingleStudent} />
                 <Route path="/campuses/:id" exact component={SingleCampus} />
                 </Switch>
           </div>
