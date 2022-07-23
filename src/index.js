@@ -1,5 +1,12 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
+import App from './components/App'
 
-const root = createRoot(document.querySelector('#root'));
-root.render(<hr />);
+render(
+    <Provider store={ store }>
+        <App />
+    </Provider>,
+    document.querySelector('#root')
+)
