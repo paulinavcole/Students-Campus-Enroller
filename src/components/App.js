@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
-import store, { getStudents, getCampuses } from '../store';
+import { getStudents, getCampuses } from '../store';
 import Nav from './Nav';
 import Students from './Students';
 import Campuses from './Campuses';

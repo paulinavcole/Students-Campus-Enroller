@@ -9,10 +9,10 @@ const Nav = (props) => {
             <h1>Campuses and Enrollments</h1>
             <ul>
                 <Link to='/students'>
-                    <li>Students({students.length})</li>
+                    <li>STUDENTS ({students.length})</li>
                 </Link>
                 <Link to='/campuses'>
-                    <li>Campuses({campuses.length})</li>
+                    <li>CAMPUSES ({campuses.length})</li>
                 </Link>
             </ul>
         </nav>

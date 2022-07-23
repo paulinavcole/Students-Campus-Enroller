@@ -49,9 +49,9 @@ You can determine views and functionality from the requirements and wireframes s
 
 ### Tier 1: All Campuses and Students
 
-- [ ] Display the campuses component when the url matches `/campuses`
-- [ ] Display the students component when the url matches `/students`
-- [ ] Add a links to the navbar that can be used to navigate to the campuses view and the students view
+- [X] Display the campuses component when the url matches `/campuses`
+- [X] Display the students component when the url matches `/students`
+- [X] Add a links to the navbar that can be used to navigate to the campuses view and the students view
 
 #### Backend Requirements
 
