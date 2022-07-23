@@ -45,7 +45,7 @@ You can determine views and functionality from the requirements and wireframes s
 
 #### Seed
 
-- [ ] Write a sync function which sync's and seeds your database when your application starts 
+- [X] Write a sync function which sync's and seeds your database when your application starts 
 
 ### Tier 1: All Campuses and Students
 
@@ -56,17 +56,17 @@ You can determine views and functionality from the requirements and wireframes s
 #### Backend Requirements
 
 - Write a `campuses` model with the following information:
-  - [ ] name - not empty or null
-  - [ ] imageUrl - string can be null 
-  - [ ] address - not empty or null
-  - [ ] description - extremely large text
+  - [X] name - not empty or null
+  - [X] imageUrl - string can be null 
+  - [X] address - not empty or null
+  - [X] description - extremely large text
 - Write a `students` model with the following information:
-  - [ ] firstName - not empty or null
-  - [ ] lastName - not empty or null
-  - [ ] email - not empty or null; must be a valid email
-  - [ ] imageUrl - string can be null 
-  - [ ] gpa - decimal between 0.0 and 4.0
-- [ ] Students may be associated with at most one campus. Likewise, campuses may be associated with many students
+  - [X] firstName - not empty or null
+  - [X] lastName - not empty or null
+  - [X] email - not empty or null; must be a valid email
+  - [X] imageUrl - string can be null 
+  - [X] gpa - decimal between 0.0 and 4.0
+- [X] Students may be associated with at most one campus. Likewise, campuses may be associated with many students
 
 
 ### Tier 2: Single Student and Single Campus
