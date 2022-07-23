@@ -13,9 +13,9 @@ const Campuses = ({ campuses, students }) => {
                     <li key={campus.id}>
                         <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
                         <br></br>
-                        <strong>Description:</strong>{campus.description}
+                        <strong>Description: </strong>{campus.description}
                         <br></br>
-                        <strong>Address:</strong> {campus.address}
+                        <strong>Address: </strong> {campus.address}
                         <br></br>
                         <img src ={campus.imageURL} width='400' height='300'/>
                         <br></br>
