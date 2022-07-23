@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import CampusForm from './CampusForm';
 
 
-const Campuses = ({ students, campuses }) => {
+const Campuses = ({ campuses }) => {
     return (
         <div>
             <ul>
@@ -19,7 +19,6 @@ const Campuses = ({ students, campuses }) => {
                             <br></br>
                             <img src ={campus.imageURL} width='400' height='300'/>
                             <br></br>
-                            Students: {students.map((student) => student.campusId === campus.id ? (<Link key={student.firstName} to={`/students/${student.id}`}> <p>{student.firstName}</p></Link>) : (' '))}
                         </li>
                     );
                 })}
