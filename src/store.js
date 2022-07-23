@@ -29,42 +29,42 @@ const _getCampuses = (campuses) => {
 const _createStudent = (student) => {
     return {
       type: CREATE_STUDENT,
-      student,
+      student
     };
 };
   
-  const _createCampus = (campus) => {
+const _createCampus = (campus) => {
     return {
       type: CREATE_CAMPUS,
-      campus,
+      campus
     };
 };
 
-  const _deleteStudent = (id) => {
+const _deleteStudent = (id) => {
     return {
       type: DELETE_STUDENT,
-      id,
+      id
     };
 };
   
-  const _deleteCampus = (id) => {
+const _deleteCampus = (id) => {
     return {
       type: DELETE_CAMPUS,
-      id,
+      id
     };
 };
 
 const _updateStudent = (student) => {
     return {
       type: UPDATE_STUDENT,
-      student,
+      student
     };
 };
   
-  const _updateCampus = (campus) => {
+const _updateCampus = (campus) => {
     return {
       type: UPDATE_CAMPUS,
-      campus,
+      campus
     };
 };
 
@@ -91,7 +91,7 @@ export const createStudent = (student) => {
 
 export const createCampus = (campus) => {
     return async (dispatch) => {
-        const newCampus = (await axios.post('/api/campus', campus)).data;
+        const newCampus = (await axios.post('/api/campuses', campus)).data;
         dispatch(_createCampus(newCampus));
     };
 };

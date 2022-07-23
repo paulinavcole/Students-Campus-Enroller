@@ -5,11 +5,12 @@ const path = require('path');
 
 app.use(express.json());
 app.use('/dist', express.static(path.join(__dirname, '../dist')))
-app.use('/api', require('./api/routes'));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'))
 }); 
+
+app.use('/api', require('./api/routes'));
 
 app.use((req, res, next) => {
     const error = Error('page not found');

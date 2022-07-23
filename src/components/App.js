@@ -7,6 +7,8 @@ import Students from './Students';
 import Campuses from './Campuses';
 import SingleCampus from './SingleCampus';
 import SingleStudent from './SingleStudent';
+import CampusForm from './CampusForm';
+
 
 
 class App extends Component {
@@ -29,6 +31,7 @@ class App extends Component {
                 <Route path="/campuses" exact component={Campuses} />
                 <Route path="/students/:id" exact component={SingleStudent} />
                 <Route path="/campuses/:id" exact component={SingleCampus} />
+                <Route path="/campuses" exact component={CampusForm} />
                 </Switch>
           </div>
         </Router>
