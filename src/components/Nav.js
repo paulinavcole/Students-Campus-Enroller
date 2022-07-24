@@ -14,6 +14,9 @@ const Nav = (props) => {
                 <Link to='/campuses'>
                     <li>CAMPUSES ({campuses.length})</li>
                 </Link>
+                <Link to='/'>
+                    <li>HOME</li>
+                </Link>
             </ul>
         </nav>
     )

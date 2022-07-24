@@ -37,6 +37,8 @@ return (
                   })
                 : `There are no students enrolled at ${campus.name}`}
             </ul>
+            <br></br>
+            <h2>UPDATE CAMPUS:</h2>
             <UpdateCampusForm props={props} />
     </div>
   );

@@ -25,6 +25,8 @@ const SingleStudent = (props) => {
             <br></br>
             {student.campusId === null ? 'is not enrolled in any campus.': 'Enrolled in: '}
             <Link to={`/campuses/${student.campusId}`}>{campus.name}</Link>
+            <br></br>
+            <h2>UPDATE STUDENT:</h2>
             <UpdateStudentForm props={props} />
         </div>
     );
