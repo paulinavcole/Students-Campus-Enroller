@@ -47,7 +47,8 @@ const Campus = conn.define('campus', {
         }
     },
     imageURL: {
-        type: STRING
+        type: STRING,
+        allowNull: true
     },
     address: {
         type: STRING,

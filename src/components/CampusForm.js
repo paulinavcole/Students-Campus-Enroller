@@ -9,6 +9,7 @@ class CampusForm extends Component {
         name: '',
         address: '',
         description: '',
+        imageURL: ''
       };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);

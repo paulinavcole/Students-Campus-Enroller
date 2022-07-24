@@ -17,8 +17,9 @@ const Campuses = ({ campuses }) => {
                             <br></br>
                             <strong>Address: </strong> {campus.address}
                             <br></br>
-                            <img src ={campus.imageURL} width='400' height='300'/>
-                            <br></br>
+                            <div id='classphotos'>
+                            <img src ={campus.imageURL}/>
+                            </div>
                         </li>
                     );
                 })}
