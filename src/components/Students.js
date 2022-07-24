@@ -31,6 +31,7 @@ const Students = ({ students, campuses, deleteStudent }) => {
                     );
                 })}
             </ul>
+            <h2>Create New Student: </h2>
             <StudentForm />
         </div>
     );

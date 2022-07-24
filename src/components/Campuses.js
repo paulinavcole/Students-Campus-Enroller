@@ -31,6 +31,7 @@ const Campuses = ({ campuses, deleteCampus }) => {
                     );
                 })}
             </ul>
+            <h2>Create New Campus: </h2>
             <CampusForm />
         </div>
     );
