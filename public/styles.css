@@ -1,16 +1,13 @@
-img{
-    height: 200px;
-    width: 200px
-}
 nav {
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
     background-color: #EA4C89;
-}
+}   
   
 nav a {
     font-weight: bold;
+    list-style: none;
     font-size: 1.5rem;
     text-decoration: none;
     color: black;
@@ -23,6 +20,18 @@ nav a {
 body {
     font-family:"Lato", sans-serif;
     background-color: lightgrey;
+}
+
+body a {
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+    color: purple;
+}
+
+body h2 {
+    text-decoration: underline;
+    font-size: 16px;
 }
 
 button {

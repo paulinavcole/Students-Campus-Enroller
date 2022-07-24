@@ -15,15 +15,14 @@ const SingleCampus = (props) => {
 
 return (
     <div>
-        Name: {campus.name}
-        <br></br>
+      <h2>{campus.name}</h2>
         Address: {campus.address}
         <br></br>
         Description: {campus.description}
         <br></br>
         <img src ={campus.imageURL} width='400' height='300'/>
         <br></br>
-        Students:
+        <h2>Students: </h2>
             <ul>
               {students.length > 0 ? students.map((student) => {
                 return (

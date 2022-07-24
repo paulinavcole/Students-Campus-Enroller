@@ -13,6 +13,7 @@ const Campuses = ({ campuses, deleteCampus }) => {
 
     return (
         <div>
+            <h2>Campus Info: </h2>
             <ul>
                 {campuses.map((campus) => {
                     return (

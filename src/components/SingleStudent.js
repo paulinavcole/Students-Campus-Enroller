@@ -13,21 +13,17 @@ const SingleStudent = (props) => {
   
     return (
       <div>
-            First Name: {student.firstName}
-            <br></br>
-            Last Name: {student.lastName}
-            <br></br>
-            Email: <a href={`mailto:${student.email}`}>{student.email}</a>
-            <br></br>
-            GPA: {student.gpa}
-            <br></br>
-            <img src ={student.imageURL} width='100' height='200'/>
-            <br></br>
-            {student.campusId === null ? 'is not enrolled in any campus.': 'Enrolled in: '}
-            <Link to={`/campuses/${student.campusId}`}>{campus.name}</Link>
-            <br></br>
-            <h2>UPDATE STUDENT:</h2>
-            <UpdateStudentForm props={props} />
+          <h2>Name: {student.firstName} {student.lastName}</h2>
+          Email: <a href={`mailto:${student.email}`}>{student.email}</a>
+          <br></br>
+          GPA: {student.gpa}
+          <br></br>
+          <img src ={student.imageURL} width='100' height='200'/>
+          <br></br>
+          {student.campusId === null ? 'is not enrolled in any campus.': 'Enrolled in: '}<Link to={`/campuses/${student.campusId}`}>{campus.name}</Link>
+          <br></br>
+          <h2>UPDATE STUDENT:</h2>
+          <UpdateStudentForm props={props} />
         </div>
     );
   };
