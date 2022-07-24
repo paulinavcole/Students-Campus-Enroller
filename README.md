@@ -133,15 +133,15 @@ You can determine views and functionality from the requirements and wireframes s
 - [X] Write a component to display a form updating _at least_ a campus's name and address
 - [X] Display this component as part of the campus view
 - Submitting the form with valid data should:
-  - [ ] Make an AJAX request that causes that campus to be updated in the database
-  - [ ] Update the campus in the current view without needing to refresh the page
+  - [X] Make an AJAX request that causes that campus to be updated in the database
+  - [X] Update the campus in the current view without needing to refresh the page
 - [X] In the campus view, display an `Unregister` button next to each of its students, which removes the student from the campus (in the database as well as this view); hint: the student is still in the database but is no longer associated with the campus
 
 - [X] Write a component to display a form updating a student
 - [X] Display this component as part of the student view
 - Submitting the form with valid data should:
-  - [ ] Make an AJAX request that causes that student to be updated in the database
-  - [ ] Update the student in the current view without needing to refresh the page
+  - [X] Make an AJAX request that causes that student to be updated in the database
+  - [X] Update the student in the current view without needing to refresh the page
 
 
 

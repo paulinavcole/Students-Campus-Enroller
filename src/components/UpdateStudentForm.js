@@ -9,7 +9,6 @@ class UpdateStudentForm extends Component {
         firstName: this.props.student ? this.props.student.firstName : '',
         lastName: this.props.student ? this.props.student.lastName : '',
         email: this.props.email ? this.props.student.email : '',
-        imageUrl: this.props.student ? this.props.student.imageUrl : '',
         gpa: this.props.student ? this.props.student.gpa : '',
         campusId: this.props.student ? this.props.student.campusId : '',
       };
@@ -20,9 +19,9 @@ class UpdateStudentForm extends Component {
   
     componentDidUpdate(prevProps) {
         if (!prevProps.student && this.props.student) {
-          const { firstName, lastName, email, gpa, campusId, imageUrl } =
+          const { firstName, lastName, email, gpa, campusId } =
             this.props.student;
-          this.setState({ firstName, lastName, email, gpa, campusId, imageUrl });
+          this.setState({ firstName, lastName, email, gpa, campusId });
         }
     }
   
@@ -34,20 +33,19 @@ class UpdateStudentForm extends Component {
   
     async handleSave(evt) {
       evt.preventDefault();
-      const { firstName, lastName, email, gpa, campusId, imageUrl } = this.state;
+      const { firstName, lastName, email, gpa, campusId } = this.state;
         await this.props.updateStudent({
           id: this.props.student.id,
           firstName,
           lastName, 
           email, 
-          imageUrl, 
           gpa, 
           campusId: +campusId
         });
     }
   
     render() {
-      const { firstName, lastName, email, gpa, campusId, imageUrl } =
+      const { firstName, lastName, email, gpa, campusId } =
       this.state;
     const { handleChange, handleSave } = this;
   
@@ -89,15 +87,8 @@ class UpdateStudentForm extends Component {
                   placeholder='Campus Id'
                 />
 
-                <input
-                  name='imageUrl'
-                  onChange={handleChange}
-                  value={imageUrl}
-                  placeholder='Image URL'
-                />
-
+                <button type="submit">Submit</button>
             </form>
-            <button type="submit">Submit</button>
         </div>        
       );
     }
