@@ -9,34 +9,37 @@ class UpdateCampusForm extends Component {
         name: this.props.campus ? this.props.campus.name : '',
         address: this.props.campus ? this.props.campus.address : ''
       };
+
       this.handleChange = this.handleChange.bind(this);
       this.handleSave = this.handleSave.bind(this);
-    }
+    };
   
     componentDidUpdate(prevProps) {
-      if (!prevProps.campus && this.props.campus) {
-        this.setState({
-             name: this.props.campus.name, 
-             address: this.props.campus.address
-        });
-      }
-    }
+        if (!prevProps.campus && this.props.campus) {
+            const { name, address } = this.props.campus;
+            this.setState({ name, address });
+        }
+    };
   
     handleChange(evt) {
       this.setState({
         [evt.target.name]: evt.target.value,
       });
-    }
+    };
   
     async handleSave(evt) {
-      evt.preventDefault();
-      const { name, address } = this.state;
-        await this.props.updateCampus({
-          id: this.props.campus.id,
-          name,
-          address
-        });
-    }
+        evt.preventDefault();
+        try {
+          const { name, address } = this.state;
+          await this.props.updateCampus({
+            id: this.props.campus.id,
+            name,
+            address
+          });
+        } catch (er) {
+          this.setState({ error: er.response.data });
+        }
+    };
   
     render() {
       const { name, address } = this.state;
@@ -60,8 +63,8 @@ class UpdateCampusForm extends Component {
                   placeholder='Campus Address'
                 />
 
+                <button type="submit">Submit</button>
             </form>
-            <button type="submit">Submit</button>
         </div>        
       );
     }
