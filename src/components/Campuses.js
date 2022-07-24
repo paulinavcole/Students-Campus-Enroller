@@ -2,9 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import CampusForm from './CampusForm';
+import { deleteCampus } from '../store';
 
 
-const Campuses = ({ campuses }) => {
+const Campuses = ({ campuses, deleteCampus }) => {
+
+    const deleteUserClick = (campus) => {
+        deleteCampus(campus.id);
+    };
+
     return (
         <div>
             <ul>
@@ -12,6 +18,7 @@ const Campuses = ({ campuses }) => {
                     return (
                         <li key={campus.id}>
                             <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
+                            <button onClick={() => deleteUserClick(campus)}>X</button>
                             <br></br>
                             <strong>Description: </strong>{campus.description}
                             <br></br>
@@ -31,4 +38,10 @@ const Campuses = ({ campuses }) => {
 
 const mapStateToProps = (state) => state;
 
-export default connect(mapStateToProps)(Campuses);
+const mapDispatchToProps = (dispatch) => {
+    return {
+      deleteCampus: (id) => dispatch(deleteCampus(id)),
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Campuses);

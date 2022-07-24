@@ -105,7 +105,7 @@ export const deleteStudent = (id) => {
 
 export const deleteCampus = (id) => {
     return async (dispatch) => {
-        await axios.delete(`/api/campus/${id}`);
+        await axios.delete(`/api/campuses/${id}`);
         dispatch(_deleteCampus(id))
     };
 };
@@ -119,7 +119,7 @@ export const updateStudent = (student) => {
 
 export const updateCampus = (campus) => {
     return async (dispatch) => {
-        campus = (await axios.put(`/api/campus/${campus.id}`, campus)).data;
+        campus = (await axios.put(`/api/campuses/${campus.id}`, campus)).data;
         dispatch(_updateCampus(campus));
     };
 };
