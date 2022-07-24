@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import UpdateStudentForm from './UpdateStudentForm';
+
 
 const SingleStudent = (props) => {
     const id = +props.match.params.id;
@@ -23,6 +25,7 @@ const SingleStudent = (props) => {
             <br></br>
             {student.campusId === null ? 'is not enrolled in any campus.': 'Enrolled in: '}
             <Link to={`/campuses/${student.campusId}`}>{campus.name}</Link>
+            <UpdateStudentForm props={props} />
         </div>
     );
   };

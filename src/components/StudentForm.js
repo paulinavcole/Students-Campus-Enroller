@@ -9,7 +9,7 @@ class StudentForm extends Component {
         firstName: '',
         lastName: '',
         email: '',
-        gpa: 0.0
+        gpa: ''
       };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);

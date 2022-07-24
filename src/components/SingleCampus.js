@@ -1,12 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import UpdateCampusForm from './UpdateCampusForm';
+import { updateStudent } from '../store';
+
+
 
 const SingleCampus = (props) => {
     const id = +props.match.params.id;
     const campuses = props.campuses;
     const students = props.students.filter((student) => student.campusId === id);
     const campus = campuses.find((campus) => campus.id === id) || {};
+    const { updateStudent } = props
 
 return (
     <div>
@@ -26,12 +31,13 @@ return (
                         <Link to={`/students/${student.id}`}>
                           {student.firstName} {student.lastName}
                         </Link>{' '}
-                        <button>Unenroll Student</button>
+                        <button onClick={() => updateStudent({...student, campusId: null})}>Unenroll Student</button>
                       </li>
                     );
                   })
                 : `There are no students enrolled at ${campus.name}`}
             </ul>
+            <UpdateCampusForm props={props} />
     </div>
   );
 };
@@ -43,5 +49,10 @@ const mapStateToProps = (state) => {
   };
 };
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    updateStudent: (student) => dispatch(updateStudent(student)),
+  };
+};
 
-export default connect(mapStateToProps)(SingleCampus);
+export default connect(mapStateToProps, mapDispatchToProps)(SingleCampus);

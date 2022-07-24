@@ -113,16 +113,16 @@ You can determine views and functionality from the requirements and wireframes s
 
 #### Frontend
 
-- [ ] In the campuses view, include an `X` button next to each campus
+- [X] In the campuses view, include an `X` button next to each campus
 - Clicking the `X` button should:
 
-  - [ ] Make an AJAX request that causes that campus to be removed from database
-  - [ ] Remove the campus from the list of campuses without needing to refresh the page
+  - [X] Make an AJAX request that causes that campus to be removed from database
+  - [X] Remove the campus from the list of campuses without needing to refresh the page
 
-- [ ] In the students view, include an `X` button next to each student
+- [X] In the students view, include an `X` button next to each student
 - Clicking the `X` button should:
-  - [ ] Make an AJAX request that causes that student to be removed from database
-  - [ ] Remove the student from the list of students without needing to refresh the page
+  - [X] Make an AJAX request that causes that student to be removed from database
+  - [X] Remove the student from the list of students without needing to refresh the page
 
 
 ### Tier 5: Updating a Campus and Updating a Student
@@ -130,15 +130,15 @@ You can determine views and functionality from the requirements and wireframes s
 
 #### Frontend
 
-- [ ] Write a component to display a form updating _at least_ a campus's name and address
-- [ ] Display this component as part of the campus view
+- [X] Write a component to display a form updating _at least_ a campus's name and address
+- [X] Display this component as part of the campus view
 - Submitting the form with valid data should:
   - [ ] Make an AJAX request that causes that campus to be updated in the database
   - [ ] Update the campus in the current view without needing to refresh the page
-- [ ] In the campus view, display an `Unregister` button next to each of its students, which removes the student from the campus (in the database as well as this view); hint: the student is still in the database but is no longer associated with the campus
+- [X] In the campus view, display an `Unregister` button next to each of its students, which removes the student from the campus (in the database as well as this view); hint: the student is still in the database but is no longer associated with the campus
 
-- [ ] Write a component to display a form updating a student
-- [ ] Display this component as part of the student view
+- [X] Write a component to display a form updating a student
+- [X] Display this component as part of the student view
 - Submitting the form with valid data should:
   - [ ] Make an AJAX request that causes that student to be updated in the database
   - [ ] Update the student in the current view without needing to refresh the page
