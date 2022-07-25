@@ -82,6 +82,15 @@ form {
 }
 
 #campusform {
-    margin: 20px
+    margin-top: 20px;
+    margin-left: 300px;
 }
 
+#studentinfo {
+    display: flex;
+}
+
+#studentform {
+    margin-top: 20px;
+    margin-left: 830px;
+}
