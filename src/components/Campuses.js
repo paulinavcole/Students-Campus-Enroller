@@ -13,8 +13,8 @@ const Campuses = ({ campuses, deleteCampus, students }) => {
     };
 
     return (
-        <div>
-            <h2>Campus Info: </h2>
+        <div id='campuses'>
+            <div id='campuslist'>
             <ul>
                 {campuses.map((campus) => {
                     return (
@@ -35,8 +35,11 @@ const Campuses = ({ campuses, deleteCampus, students }) => {
                     );
                 })}
             </ul>
+            </div>
+            <div id='campusform'>
             <h2>Create New Campus: </h2>
             <CampusForm />
+            </div>
         </div>
     );
 };
