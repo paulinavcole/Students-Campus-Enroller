@@ -8,8 +8,7 @@ class CampusForm extends Component {
       this.state = {
         name: '',
         address: '',
-        description: '',
-        imageURL: ''
+        description: ''
       };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -52,7 +51,6 @@ class CampusForm extends Component {
               value={description}
               placeholder="Campus Description"
             />
-  
             <button type="submit">Submit</button>
           </form>
         </div>
