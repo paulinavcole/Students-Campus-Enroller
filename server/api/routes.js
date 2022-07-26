@@ -27,7 +27,14 @@ router.post('/students', async (req, res, next) => {
         res.status(201).send(await Student.create(req.body));
     }
     catch(ex) {
-        next(ex);
+        if (ex.name === 'SequelizeValidationError') {
+            return res.status(400).json({
+              success: false,
+              msg: ex.errors.map(e => e.message)
+            })
+          } else {
+            next(new ErrorResponse(`Sorry, could not save ${req.body}`, 404))
+          }
     }
 });
 
@@ -37,7 +44,14 @@ router.post('/campuses', async (req, res, next) => {
         res.status(201).send(await Campus.create(req.body));
     }
     catch(ex) {
-        next(ex);
+        if (ex.name === 'SequelizeValidationError') {
+            return res.status(400).json({
+              success: false,
+              msg: ex.errors.map(e => e.message)
+            })
+          } else {
+            next(new ErrorResponse(`Sorry, could not save ${req.body}`, 404))
+          }
     }
 });
 

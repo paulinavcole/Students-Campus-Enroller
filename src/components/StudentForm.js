@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { createStudent } from '../store';
 import { connect } from 'react-redux';
 
+
 class StudentForm extends Component {
     constructor() {
       super();
@@ -9,7 +10,7 @@ class StudentForm extends Component {
         firstName: '',
         lastName: '',
         email: '',
-        gpa: ''
+        gpa: '',
       };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
