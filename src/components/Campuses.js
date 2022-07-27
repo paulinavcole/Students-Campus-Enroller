@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import CampusForm from './CampusForm';
 import { deleteCampus } from '../store';
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';import AddIcon from '@mui/icons-material/Add';
+
 
 const Campuses = ({ campuses, students, deleteCampus }) => {
   let enrollments;
@@ -22,7 +23,7 @@ const Campuses = ({ campuses, students, deleteCampus }) => {
           {campuses.map((campus) => {
             return (
               <li key={campus.id} className="campus">
-                <HighlightOffIcon
+                <DeleteForeverIcon
                   fontSize="small"
                   onClick={() => handleClick(campus)}
                 />
@@ -39,6 +40,7 @@ const Campuses = ({ campuses, students, deleteCampus }) => {
             );
           })}
         </ul>
+        <h2>Create New Campus <AddIcon fontSize='large' /></h2>
         <CampusForm />
       </div>
     </div>

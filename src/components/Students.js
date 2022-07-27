@@ -3,12 +3,15 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import StudentForm from './StudentForm';
 import { deleteStudent } from '../store';
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';import AddIcon from '@mui/icons-material/Add';
+import AttachEmailIcon from '@mui/icons-material/AttachEmail';
+
+
 
 const Students = ({ students, campuses, deleteStudent }) => {
   return (
     <div>
-      <h1 className="page-title">
+      <h1>
         {students.length === 0 ? 'Create A Student' : 'Students'}
       </h1>
       <div className="students">
@@ -16,17 +19,16 @@ const Students = ({ students, campuses, deleteStudent }) => {
           {students.map((student) => {
             return (
               <li key={student.id} className="student">
-                <HighlightOffIcon
+                <DeleteForeverIcon
                   fontSize="small"
                   onClick={() => deleteStudent(student.id)}
-                  className="delete-button"
                 />
 
                 <Link to={`/students/${student.id}`}>
                   {student.firstName} {student.lastName}
                 </Link>
                 <div>
-                  Email: <a href={`mailto:${student.email}`}>{student.email}</a>{' '}
+                  Email: <AttachEmailIcon fontSize='small' /> <a href={`mailto:${student.email}`}>{student.email}</a>{' '}
                 </div>
                 <div>GPA: {student.gpa}</div>
                 <img src ={student.imageURL}/>
@@ -47,6 +49,7 @@ const Students = ({ students, campuses, deleteStudent }) => {
             );
           })}
         </ul>
+        <h2>Create New Student<AddIcon fontSize='large' /></h2>
         <StudentForm />
       </div>
     </div>
