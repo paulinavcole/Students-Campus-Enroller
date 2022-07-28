@@ -18,7 +18,7 @@ const SingleStudent = (props) => {
           <br></br>
           GPA: {student.gpa}
           <br></br>
-          <img src ={student.imageURL} width='100' height='200'/>
+          <img src ={student.imageURL} />
           <br></br>
           {student.campusId === null ? 'is not enrolled in any campus.': 'Enrolled in: '}<Link to={`/campuses/${student.campusId}`}>{campus.name}</Link>
           <br></br>

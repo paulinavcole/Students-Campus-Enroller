@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Nav = (props) => {
     const { students, campuses } = props.props;
 
     return (
         <nav>
-            <h1>Campuses and Enrollments</h1>
             <Link to='/'>
                     <li>HOME</li>
                 </Link>
@@ -19,6 +19,7 @@ const Nav = (props) => {
         </nav>
     )
 };
+
 
 export default Nav;
 

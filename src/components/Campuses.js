@@ -9,40 +9,33 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';import AddIcon
 const Campuses = ({ campuses, students, deleteCampus }) => {
   let enrollments;
 
-  const handleClick = (campus) => {
+  const deleteUserClick = (campus) => {
     deleteCampus(campus.id);
   };
 
   return (
     <div>
-      <h1 className="page-title">
-        {campuses.length === 0 ? 'Create A Campus' : 'Campuses'}
-      </h1>
-      <div className="campuses">
+      <h1>{campuses.length === 0 ? 'Create A Campus' : 'Campuses'}</h1>
+      <div>
         <ul>
           {campuses.map((campus) => {
             return (
-              <li key={campus.id} className="campus">
+              <li key={campus.id}>
                 <DeleteForeverIcon
                   fontSize="small"
-                  onClick={() => handleClick(campus)}
+                  onClick={() => deleteUserClick(campus)}
                 />
                 <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
-                {`(${
-                  (enrollments = students.filter(
-                    (student) => student.campusId === campus.id
-                  )).length
-                }
-                ${enrollments.length === 1 ? 'enrollment' : 'enrollments'})`}
+                <strong>Enrollments: </strong>{`(${(enrollments = students.filter((student) => student.campusId === campus.id)).length} ${enrollments.length === 1 ? 'enrollment' : 'enrollments'})`}
                 <div>Address: {campus.address}</div>
                 <img src ={campus.imageURL}/>
               </li>
             );
           })}
         </ul>
-        <h2>Create New Campus <AddIcon fontSize='large' /></h2>
-        <CampusForm />
       </div>
+      <h2>Create New Campus <AddIcon fontSize='large' /></h2>
+      <CampusForm />
     </div>
   );
 };
