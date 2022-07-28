@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import { getStudents, getCampuses } from '../store';
 import Nav from './Nav';
+import Home from './Home'
 import Students from './Students';
 import Campuses from './Campuses';
 import SingleCampus from './SingleCampus';
@@ -25,10 +26,8 @@ class App extends Component {
             <Router>
                 <Nav props={this.props} />
                 <div>
-                    <Switch>
-                    <Route path="/" exact>
-                    <Redirect to="/students" />
-                </Route>
+                <Switch>
+                <Route path="/" exact component={Home} />
                 <Route path="/students" exact component={Students} />
                 <Route path="/campuses" exact component={Campuses} />
                 <Route path="/students/:id" exact component={SingleStudent} />

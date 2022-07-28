@@ -7,6 +7,9 @@ const Nav = (props) => {
     return (
         <nav>
             <h1>Campuses and Enrollments</h1>
+            <Link to='/'>
+                    <li>HOME</li>
+                </Link>
                 <Link to='/students'>
                     <li>STUDENTS ({students.length})</li>
                 </Link>
