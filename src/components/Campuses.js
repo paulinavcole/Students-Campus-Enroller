@@ -26,6 +26,7 @@ const Campuses = ({ campuses, students, deleteCampus }) => {
                   onClick={() => deleteUserClick(campus)}
                 />
                 <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
+                <br></br>
                 <strong>Enrollments: </strong>{`(${(enrollments = students.filter((student) => student.campusId === campus.id)).length} ${enrollments.length === 1 ? 'enrollment' : 'enrollments'})`}
                 <div>Address: {campus.address}</div>
                 <img src ={campus.imageURL}/>
