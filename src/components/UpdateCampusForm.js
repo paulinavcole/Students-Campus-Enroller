@@ -49,7 +49,7 @@ class UpdateCampusForm extends Component {
       return (
         <div>
             <form onSubmit={handleSave}>
-                <label for="name">Name:</label>
+                <label htmlFor="name">Name:</label>
                 <input
                   name='name'
                   onChange={handleChange}
@@ -57,7 +57,7 @@ class UpdateCampusForm extends Component {
                   placeholder='Campus Name'
                 />
 
-                <label for="address">Address:</label>
+                <label htmlFor="address">Address:</label>
                 <input
                   name='address'
                   onChange={handleChange}

@@ -53,7 +53,7 @@ class UpdateStudentForm extends Component {
         <div>
             <form onSubmit={handleSave}>
 
-                <label for="firstName">First Name:</label>
+                <label htmlFor="firstName">First Name:</label>
                 <input
                   name='firstName'
                   onChange={handleChange}
@@ -61,7 +61,7 @@ class UpdateStudentForm extends Component {
                   placeholder='First Name'
                 />
 
-                <label for="lastName">Last Name:</label>
+                <label htmlFor="lastName">Last Name:</label>
                 <input
                   name='lastName'
                   onChange={handleChange}
@@ -69,7 +69,7 @@ class UpdateStudentForm extends Component {
                   placeholder='Last Name'
                 />
 
-                <label for="email">email:</label>
+                <label htmlFor="email">email:</label>
                 <input
                   name='email'
                   onChange={handleChange}
@@ -77,7 +77,7 @@ class UpdateStudentForm extends Component {
                   placeholder='Email'
                 />      
                 
-                <label for="gpa">GPA:</label>
+                <label htmlFor="gpa">GPA:</label>
                 <input
                   name='gpa'
                   onChange={handleChange}
@@ -85,7 +85,7 @@ class UpdateStudentForm extends Component {
                   placeholder='GPA'
                 />
 
-                <label for="campusId">Campus Id:</label>
+                <label htmlFor="campusId">Campus Id:</label>
                 <input
                   name='campusId'
                   onChange={handleChange}
