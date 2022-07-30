@@ -1,3 +1,6 @@
+LINK TO DEPLOYED APP:
+https://jpfp-pc.herokuapp.com/#/
+
 # Junior Phase Final Project
 
 ## Getting started
