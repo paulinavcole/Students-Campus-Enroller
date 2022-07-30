@@ -20,16 +20,16 @@ const Campuses = ({ campuses, students, deleteCampus }) => {
         <ul>
           {campuses.map((campus) => {
             return (
-              <li key={campus.id}>
+              <li key={ campus.id }>
                 <DeleteForeverIcon
                   fontSize="small"
                   onClick={() => deleteUserClick(campus)}
                 />
-                <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
+                <Link to={ `/campuses/${campus.id}` }>{ campus.name }</Link>
                 <br></br>
                 <strong>Enrollments: </strong>{`(${(enrollments = students.filter((student) => student.campusId === campus.id)).length} ${enrollments.length === 1 ? 'enrollment' : 'enrollments'})`}
-                <div>Address: {campus.address}</div>
-                <img src ={campus.imageURL}/>
+                <div>Address: { campus.address }</div>
+                <img src ={ campus.imageURL }/>
               </li>
             );
           })}

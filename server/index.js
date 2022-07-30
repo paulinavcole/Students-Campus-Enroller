@@ -4,10 +4,10 @@ const app = express();
 const path = require('path');
 
 app.use(express.json());
-app.use('/dist', express.static(path.join(__dirname, '../dist')))
+app.use('/dist', express.static(path.join(__dirname, '../dist')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'))
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 }); 
 
 app.use('/api', require('./api/routes'));
@@ -36,4 +36,4 @@ const init = async() => {
     }
 };
 
-init()
+init();

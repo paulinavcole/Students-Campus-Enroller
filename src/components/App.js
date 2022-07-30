@@ -12,8 +12,6 @@ import CampusForm from './CampusForm';
 import StudentForm from './StudentForm';
 
 
-
-
 class App extends Component {
     componentDidMount() {
       this.props.loadStudents();
@@ -27,20 +25,20 @@ class App extends Component {
                 <Nav props={this.props} />
                 <div>
                 <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/students" exact component={Students} />
-                <Route path="/campuses" exact component={Campuses} />
-                <Route path="/students/:id" exact component={SingleStudent} />
-                <Route path="/campuses/:id" exact component={SingleCampus} />
-                <Route path="/campuses" exact component={CampusForm} />
-                <Route path="/students" exact component={StudentForm} />
+                <Route path="/" exact component={ Home } />
+                <Route path="/students" exact component={ Students } />
+                <Route path="/campuses" exact component={ Campuses } />
+                <Route path="/students/:id" exact component={ SingleStudent}  />
+                <Route path="/campuses/:id" exact component={ SingleCampus } />
+                <Route path="/campuses" exact component={ CampusForm } />
+                <Route path="/students" exact component={ StudentForm } />
                 </Switch>
+                </div>
+              </Router>
           </div>
-        </Router>
-      </div>
-      );
-    }
-  }
+        );
+      };
+    };
   
   const mapStateToProps = (state) => state;
   

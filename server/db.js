@@ -95,36 +95,36 @@ const syncAndSeed = async () => {
 
     await Promise.all([
         Student.create({
-            firstName: 'Moe',
-            lastName: 'Calvin',
-            email: 'moe.calvin@gmail.com',
+            firstName: 'Hello',
+            lastName: 'Kitty',
+            email: 'hello.kitty@gmail.com',
             imageURL: 'https://www.sanrio.co.jp/wp-content/uploads/2013/09/hellokitty_b.png',
             gpa: 3.0,
             campusId: bazzTech.id
         }),
 
         Student.create({
-            firstName: 'Lucy',
-            lastName: 'Harris',
-            email: 'lucy.harris@gmail.com',
+            firstName: 'Gudetama',
+            lastName: 'B',
+            email: 'gudetama.b@gmail.com',
             imageURL: 'https://www.sanrio.co.jp/wp-content/uploads/2014/03/gudetama_b.png',
             gpa: 4.0,
             campusId: fooState.id
         }),
 
         Student.create({
-            firstName: 'Ethyl',
-            lastName: 'Lim',
-            email: 'ethyl.lim@gmail.com',
+            firstName: 'KerokeRoke',
+            lastName: 'Roppi',
+            email: 'kerokeroke.roppi@gmail.com',
             imageURL: 'https://www.sanrio.co.jp/wp-content/uploads/2013/09/kerokerokeroppi_b.png',
             gpa: 3.5,
             campusId: fooState.id
         }),
 
         Student.create({
-            firstName: 'Larry',
-            lastName: 'Wood',
-            email: 'larry.wood@gmail.com',
+            firstName: 'Cinnamo',
+            lastName: 'Roll',
+            email: 'cinnamo.roll@gmail.com',
             imageURL: 'https://www.sanrio.co.jp/wp-content/uploads/2013/09/cinnamoroll_b.png',
             gpa: 3.3,
             campusId: barCollege.id
@@ -139,4 +139,4 @@ module.exports = {
         Student,
         Campus
     }
-}
+};

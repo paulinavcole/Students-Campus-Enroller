@@ -26,7 +26,6 @@ body a {
     font-weight: bold;
     list-style: none;
     text-decoration: none;
-    color:black;
 }
 
 body h2 {
@@ -36,30 +35,30 @@ body h2 {
 }
 
 button {
-  background-color: #EA4C89;
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  height: 40px;
-  line-height: 20px;
-  list-style: none;
-  margin: 10px;
-  outline: none;
-  padding: 10px 16px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: color 100ms;
-  vertical-align: baseline;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+   background-color: #EA4C89;
+   border-radius: 8px;
+   border-style: none;
+   box-sizing: border-box;
+   color: #FFFFFF;
+   cursor: pointer;
+   display: inline-block;
+   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 14px;
+   font-weight: 500;
+   height: 40px;
+   line-height: 20px;
+   list-style: none;
+   margin: 10px;
+   outline: none;
+   padding: 10px 16px;
+   position: relative;
+   text-align: center;
+   text-decoration: none;
+   transition: color 100ms;
+   vertical-align: baseline;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
 }
 
 button:disabled {
@@ -67,7 +66,6 @@ button:disabled {
     background-color: white;
 }
 
-/* form */
 form {
     display: flex;
     flex-direction: column;
@@ -76,7 +74,7 @@ form {
     margin: 1em;
 }
   
-  input,select {
+input,select {
     padding: 0.3em;
     margin: 0.5em 0;
     font-size: 1em;
@@ -101,5 +99,5 @@ form {
 }
 
 #homepage {
-    text-align: center  ;
+    text-align: center;
 }
