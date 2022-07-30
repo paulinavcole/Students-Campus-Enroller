@@ -61,7 +61,7 @@ class StudentForm extends Component {
               placeholder="GPA"
             />
   
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={!firstName || !lastName || !email || !gpa}>Submit</button>
           </form>
         </div>
       );

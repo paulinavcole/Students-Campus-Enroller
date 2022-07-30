@@ -51,7 +51,7 @@ class CampusForm extends Component {
               value={description}
               placeholder="Campus Description"
             />
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={!name || !address || !description}>Submit</button>
           </form>
         </div>
       );

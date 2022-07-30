@@ -14,7 +14,7 @@ X If a campus has enrollments, the enrollments will be shown on the campus detai
 ### Creating Students and Campuses (20 points)
 X A user can create a student with a form on the students listing page
 X A user can create a campus with a form on the campuses listing page
-- The user interface should indicate an error if the campus or student could not be created.
+X The user interface should indicate an error if the campus or student could not be created.- button is disabled if user can't create the campus or student
 
 ### Deleting Students and Campuses (20 points)
 X A user can delete a student with a form on the students listing page
